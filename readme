@@ -1,0 +1,48 @@
+# 0.1 configuração inicial
+
+npm init -y 
+
+npm install -D typescript @types/node tsx tsup
+
+npm install prisma -D
+npm install @prisma/client
+
+# 0.1.1
+
+Crie variaveis de ambiente, arquivo .env
+
+DATABASE_URL
+# 0.2 configuração typescript
+
+#iniciar a configuração do typescript
+npx tsc --init 
+
+##Configure
+em "tsconfig.json" configure a versão de Node que irá rodar no servidor
+(obs: na hora do build isso indica qual versão de node é minimamente requisitada)
+ - mude o valor de "target" para indicar a versão ex: "es2020"
+
+#instalação do framework 
+
+npm install fastify
+
+#intalação do ORM (Prisma)
+
+npm install prisma -D 
+
+npm install @prisma/client
+
+#Configuração do ORM 
+
+npx prisma init
+ - será criado o arquivo schema.prisma
+
+verifique a conexão com o banco de dados
+
+npx prisma migrate dev 
+ - para criar uma migração para o banco de dados
+
+#prisma studio
+
+npx prisma studio
+ - para abrir o studio
